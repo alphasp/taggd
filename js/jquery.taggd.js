@@ -122,8 +122,8 @@
 		});
 	};
 	
-	Taggd.prototype.initWrapper = function() {
-		var wrapper = $('<div class="taggd-wrapper" />');
+	Taggd.prototype.initWrapper = function () {
+		var wrapper = $('<div class="taggd-wrapper img-center" />');
 		this.element.wrap(wrapper);
 		
 		this.wrapper = this.element.parent('.taggd-wrapper');
@@ -329,12 +329,13 @@
 			
 			$item.css('position', 'absolute');
 			$item.addClass('taggd-item');
+			$item.addClass('active');
 			$item.addClass('animate'); //
 			
 			_this.wrapper.append($item);
 			
 		    if(typeof v.text === 'string' && (v.text.length > 0 || _this.options.edit)) {
-				$hover = $('<span class="taggd-item-hover" style="position: absolute;" />').html(v.text);
+				$hover = $('<span class="taggd-item-hover show" style="position: absolute;" />').html(v.text);
 				
 				$hover.attr({
 					'data-x': v.x,

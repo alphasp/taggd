@@ -1,11 +1,11 @@
 taggd
 =====
 
-A configurable jQuery plugin that allows you to tag images.
+A configurable jQuery plugin that allows you to tag images with pulse effect.
 
 ## 1. Installation
 
-[Download the archive](https://github.com/timseverien/taggd/archive/v2.0.3.zip) or browse the repository.
+[Download the archive](https://github.com/alphasp/taggd/archive/master.zip) or browse the repository.
 
 Then include it after your jQuery file.
 
@@ -98,7 +98,7 @@ Data are the tags. Taggd accepts different formats, so pay close attention!
 
 As noted in the comments, whatever unit you use, they will scale. The coordinates are always right.
 
-Not sure how to get them? I’ve made [a generator to get coordinates](https://timseverien.com/projects/taggd/generator/).
+Not sure how to get them? Use [generator to get coordinates](https://timseverien.com/projects/taggd/generator/).
 
 ## 4. The API
 

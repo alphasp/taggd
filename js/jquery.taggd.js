@@ -46,13 +46,18 @@
 		},
 		
 		toggle: function() {
-			var $hover = $(this).next();
-			
-			if($hover.hasClass('show')) {
+			var $this = $(this);
+			if($this.hasClass('active')) {
 				methods.hide.call(this);
 			} else {
 				methods.show.call(this);
 			}
+			//var $hover = $(this).next();
+			// if($hover.hasClass('show')) {
+			// 	methods.hide.call(this);
+			// } else {
+			// 	methods.show.call(this);
+			// }
 		}
 	};
 	

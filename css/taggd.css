@@ -26,7 +26,7 @@
 }
 
 .taggd-wrapper {
-	overflow: hidden;
+	/*overflow: hidden;*/
 	position: relative;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: antialiased;
@@ -35,7 +35,7 @@
 .taggd-wrapper .taggd-item {
     background-color: rgba(219, 50, 92, 0.75);
 	cursor: pointer;
-	display: block;
+	display: none;
 	padding: 10px;
 	z-index: 1000;
 
@@ -74,6 +74,9 @@
 	} 
 }
 
+.taggd-wrapper .taggd-item.active {
+	display: block;
+}
 .taggd-wrapper .taggd-item.active,
 .taggd-wrapper .taggd-item:hover { background-color: rgba(219, 50, 92, 0.75); }
 

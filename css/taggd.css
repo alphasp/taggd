@@ -28,7 +28,6 @@
 .taggd-wrapper {
 	overflow: hidden;
 	position: relative;
-	
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: antialiased;
 }
@@ -43,24 +42,49 @@
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+}
 
-    -webkit-transition: background-color 0.2s;
-    -moz-transition: background-color 0.2s;
-    transition: background-color 0.2s;
+.taggd-wrapper .taggd-item.animate {
+	-webkit-animation: sk-pulseScaleOut 0.8s infinite ease-in-out;
+	animation: sk-pulseScaleOut 0.8s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-pulseScaleOut {
+	0% {
+		-webkit-transform: scale(0.4);
+		transform: scale(0.4); 
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0.3; 
+	} 
+}
+@keyframes sk-pulseScaleOut {
+	0% {
+		-webkit-transform: scale(0.4);
+		transform: scale(0.4); 
+		opacity: : 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 0.3; 
+	} 
 }
 
 .taggd-wrapper .taggd-item.active,
 .taggd-wrapper .taggd-item:hover { background-color: rgba(219, 50, 92, 0.75); }
 
 .taggd-wrapper .taggd-item-hover {
-    background-color: rgb(219, 50, 92);
 	color: transparent;
 	cursor: default;
-	display: block;
+	display: none;
     font-weight: lighter;
-	opacity: 0;
+	opacity: 0.8;
 	overflow: hidden;
-	padding: 0 10px;
+	padding: 5px;
 	z-index: 999;
 
 	-webkit-border-radius: 4px;
@@ -81,8 +105,8 @@
 
 .taggd-wrapper .taggd-item-hover.show {
 	color: #fff;
-	opacity: 1;
-	padding: 10px;
+	display: block;
+	background-color: #333333;
 	z-index: 1000;
 }
 

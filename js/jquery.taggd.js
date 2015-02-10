@@ -324,10 +324,11 @@
 			
 			$item.css('position', 'absolute');
 			$item.addClass('taggd-item');
+			$item.addClass('animate'); //
 			
 			_this.wrapper.append($item);
 			
-			if(typeof v.text === 'string' && (v.text.length > 0 || _this.options.edit)) {
+		    if(typeof v.text === 'string' && (v.text.length > 0 || _this.options.edit)) {
 				$hover = $('<span class="taggd-item-hover" style="position: absolute;" />').html(v.text);
 				
 				$hover.attr({
@@ -337,6 +338,7 @@
 				
 				_this.wrapper.append($hover);
 			}
+
 			
 			if(typeof _this.options.handlers === 'object') {
 				$.each(_this.options.handlers, function(event, func) {
@@ -375,10 +377,10 @@
 		
 		this.wrapper.find('span').each(function(i, e) {
 			var $el = $(e);
-			
+
 			var left = $el.attr('data-x') * _this.element.width();
 			var top = $el.attr('data-y') * _this.element.height();
-			
+
 			if($el.hasClass('taggd-item')) {
 				$el.css({
 					left: left - $el.outerWidth(true) / 2,
@@ -400,8 +402,8 @@
 				$el.attr('data-align', $el.outerWidth(true));
 				
 				$el.css({
-					left: left + _this.options.offset.left,
-					top: top + _this.options.offset.top
+						left: left + _this.options.offset.left,
+						top: top + _this.options.offset.top
 				});
 			}
 		});

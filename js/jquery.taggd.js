@@ -335,7 +335,8 @@
 			_this.wrapper.append($item);
 			
 		    if(typeof v.text === 'string' && (v.text.length > 0 || _this.options.edit)) {
-				$hover = $('<span class="taggd-item-hover show" style="position: absolute;" />').html(v.text);
+		    	var $text = $("<strong></strong").html(v.text);
+				$hover = $('<span class="taggd-item-hover show" style="position: absolute;" />').html($text);
 				
 				$hover.attr({
 					'data-x': v.x,
